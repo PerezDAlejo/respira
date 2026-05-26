@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" font-family="'Inter', 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrowBi" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#1B4332"/>
+    </marker>
+    <marker id="arrowBiUp" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto-start-reverse">
+      <polygon points="8 0, 0 3, 8 6" fill="#1B4332"/>
+    </marker>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="820" height="560" fill="#F0F7F4"/>
+
+  <!-- Título -->
+  <text x="410" y="38" font-size="20" fill="#1B4332" font-weight="700" text-anchor="middle">Arquitectura del Sistema RESPIRA</text>
+  <text x="410" y="58" font-size="12" fill="#2D6A4F" text-anchor="middle">Modelo de capas — de percepción a usuario</text>
+
+  <!-- CAPA 1 — PERCEPCIÓN -->
+  <rect x="60" y="80" width="700" height="82" rx="10" fill="#1B4332" filter="url(#shadow)"/>
+  <text x="90" y="108" font-size="16" fill="white" font-weight="700">Capa de Percepción</text>
+  <text x="90" y="128" font-size="11" fill="#A8DADC">Nodos físicos: ESP32 · PMS5003 · DHT22 · BMP280 · Turbina Savonius</text>
+  <text x="90" y="148" font-size="10" fill="#52B788">Protocolo: UART (PMS5003) · One-Wire (DHT22) · I²C (BMP280)</text>
+  <!-- Íconos sensor -->
+  <rect x="640" y="92" width="30" height="22" rx="4" fill="white" opacity="0.15"/>
+  <text x="655" y="108" font-size="9" fill="#52B788" text-anchor="middle">WiFi</text>
+  <rect x="678" y="92" width="30" height="22" rx="4" fill="white" opacity="0.15"/>
+  <text x="693" y="108" font-size="9" fill="#E9C46A" text-anchor="middle">ESP</text>
+  <rect x="640" y="120" width="68" height="22" rx="4" fill="white" opacity="0.1"/>
+  <text x="674" y="135" font-size="9" fill="white" text-anchor="middle">Sensores</text>
+
+  <!-- Flecha bidireccional 1↔2 -->
+  <line x1="410" y1="162" x2="410" y2="176" stroke="#1B4332" stroke-width="2" marker-end="url(#arrowBi)"/>
+  <text x="490" y="172" font-size="10" fill="#2D6A4F">UART / WiFi / MQTT</text>
+
+  <!-- CAPA 2 — COMUNICACIÓN -->
+  <rect x="60" y="178" width="700" height="75" rx="10" fill="#2D6A4F" filter="url(#shadow)"/>
+  <text x="90" y="206" font-size="16" fill="white" font-weight="700">Capa de Comunicación</text>
+  <text x="90" y="226" font-size="11" fill="#A8DADC">WiFi IEEE 802.11 b/g/n → Broker MQTT (Mosquitto) → Topics estructurados por nodo</text>
+  <rect x="660" y="190" width="80" height="24" rx="6" fill="white" opacity="0.15"/>
+  <text x="700" y="207" font-size="10" fill="#E9C46A" text-anchor="middle">MQTT v3.1.1</text>
+
+  <!-- Flecha bidireccional 2↔3 -->
+  <line x1="410" y1="253" x2="410" y2="266" stroke="#1B4332" stroke-width="2" marker-end="url(#arrowBi)"/>
+  <text x="490" y="263" font-size="10" fill="#2D6A4F">HTTP / REST</text>
+
+  <!-- CAPA 3 — PROCESAMIENTO -->
+  <rect x="60" y="268" width="700" height="75" rx="10" fill="#52B788" filter="url(#shadow)"/>
+  <text x="90" y="296" font-size="16" fill="#1A1A2E" font-weight="700">Capa de Procesamiento</text>
+  <text x="90" y="316" font-size="11" fill="#1A1A2E">FastAPI · SQLAlchemy · PostgreSQL · Motor de cálculo ICA/POECA</text>
+  <rect x="660" y="280" width="80" height="24" rx="6" fill="#1B4332" opacity="0.2"/>
+  <text x="700" y="297" font-size="10" fill="#1B4332" text-anchor="middle">REST API</text>
+
+  <!-- Flecha bidireccional 3↔4 -->
+  <line x1="410" y1="343" x2="410" y2="356" stroke="#1B4332" stroke-width="2" marker-end="url(#arrowBi)"/>
+  <text x="490" y="353" font-size="10" fill="#2D6A4F">WebSocket / REST</text>
+
+  <!-- CAPA 4 — PRESENTACIÓN -->
+  <rect x="60" y="358" width="700" height="75" rx="10" fill="#E9C46A" filter="url(#shadow)"/>
+  <text x="90" y="386" font-size="16" fill="#1A1A2E" font-weight="700">Capa de Presentación</text>
+  <text x="90" y="406" font-size="11" fill="#1A1A2E">React Dashboard · Recharts (gráficos) · Leaflet.js (mapa) · Actualización en tiempo real</text>
+  <rect x="660" y="370" width="80" height="24" rx="6" fill="#1B4332" opacity="0.15"/>
+  <text x="700" y="387" font-size="10" fill="#1B4332" text-anchor="middle">WebSocket</text>
+
+  <!-- Flecha bidireccional 4↔5 -->
+  <line x1="410" y1="433" x2="410" y2="446" stroke="#1B4332" stroke-width="2" marker-end="url(#arrowBi)"/>
+  <text x="490" y="443" font-size="10" fill="#2D6A4F">Interfaz web / Navegador</text>
+
+  <!-- CAPA 5 — USUARIO -->
+  <rect x="60" y="448" width="700" height="75" rx="10" fill="#F0F7F4" stroke="#2D6A4F" stroke-width="2" filter="url(#shadow)"/>
+  <text x="90" y="476" font-size="16" fill="#1B4332" font-weight="700">Capa de Usuario</text>
+  <text x="90" y="496" font-size="11" fill="#2D6A4F">Estudiantes · Docentes · Comunidad ISC · SIATA (validación comparativa)</text>
+  <!-- Íconos usuario -->
+  <circle cx="660" cy="478" r="10" fill="#2D6A4F" opacity="0.25"/>
+  <g fill="none" stroke="#2D6A4F" stroke-width="1.4"><circle cx="660" cy="475" r="2.4"/><path d="M656 483a4 4 0 0 1 8 0"/></g>
+  <circle cx="685" cy="478" r="10" fill="#2D6A4F" opacity="0.25"/>
+  <g fill="none" stroke="#2D6A4F" stroke-width="1.4"><circle cx="685" cy="475" r="2.4"/><path d="M681 483a4 4 0 0 1 8 0"/></g>
+  <circle cx="710" cy="478" r="10" fill="#2D6A4F" opacity="0.25"/>
+  <g fill="none" stroke="#2D6A4F" stroke-width="1.4"><circle cx="710" cy="475" r="2.4"/><path d="M706 483a4 4 0 0 1 8 0"/></g>
+
+  <!-- Nota pie -->
+  <text x="410" y="545" font-size="10" fill="#2D6A4F" text-anchor="middle" font-style="italic">Arquitectura de referencia — sujeta a ajustes durante la implementación</text>
+</svg>

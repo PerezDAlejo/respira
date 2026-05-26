@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" font-family="'Inter', 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4895EF"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#52B788"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#E9C46A"/>
+    </marker>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="600" height="800" fill="#F0F7F4"/>
+
+  <!-- Título -->
+  <text x="300" y="32" font-size="18" fill="#1B4332" font-weight="700" text-anchor="middle">Flujo de Aire en el Nodo RESPIRA</text>
+
+  <!-- Flechas entrada de aire (arriba) -->
+  <line x1="230" y1="50" x2="230" y2="88" stroke="#4895EF" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <line x1="300" y1="50" x2="300" y2="88" stroke="#4895EF" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <line x1="370" y1="50" x2="370" y2="88" stroke="#4895EF" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="300" y="48" font-size="10" fill="#4895EF" text-anchor="middle">Aire ambiente (entrada)</text>
+
+  <!-- Cuerpo cilíndrico del nodo -->
+  <rect x="170" y="90" width="260" height="590" rx="130" fill="none" stroke="#2D6A4F" stroke-width="3"/>
+
+  <!-- 1. Turbina Savonius -->
+  <rect x="195" y="100" width="210" height="55" rx="10" fill="#1B4332" filter="url(#shadow)"/>
+  <text x="300" y="122" font-size="12" fill="white" font-weight="700" text-anchor="middle">Microturbina Savonius</text>
+  <text x="300" y="140" font-size="10" fill="#52B788" text-anchor="middle">Generación eólica</text>
+
+  <!-- 2. Sensor PMS5003 pre-filtrado -->
+  <rect x="195" y="168" width="210" height="50" rx="8" fill="#52B788" opacity="0.85" filter="url(#shadow)"/>
+  <text x="300" y="187" font-size="11" fill="white" font-weight="700" text-anchor="middle">PMS5003</text>
+  <text x="300" y="204" font-size="10" fill="white" text-anchor="middle">Lectura PRE-filtrado</text>
+
+  <!-- 3. Prefiltro lavable -->
+  <rect x="195" y="230" width="210" height="50" rx="8" fill="#A8DADC" filter="url(#shadow)"/>
+  <!-- Líneas de malla -->
+  <line x1="215" y1="245" x2="385" y2="245" stroke="#2D6A4F" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="215" y1="255" x2="385" y2="255" stroke="#2D6A4F" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="215" y1="265" x2="385" y2="265" stroke="#2D6A4F" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="300" y="259" font-size="11" fill="#1B4332" font-weight="700" text-anchor="middle">Prefiltro Lavable (malla)</text>
+
+  <!-- 4. HEPA H13 -->
+  <rect x="195" y="293" width="210" height="55" rx="8" fill="#E8F0EB" stroke="#2D6A4F" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="300" y="316" font-size="11" fill="#1B4332" font-weight="700" text-anchor="middle">Filtro HEPA H13</text>
+  <text x="300" y="333" font-size="10" fill="#2D6A4F" text-anchor="middle">Eficiencia ≥ 99.95%</text>
+
+  <!-- 5. Carbón activado -->
+  <rect x="195" y="361" width="210" height="50" rx="8" fill="#495057" filter="url(#shadow)"/>
+  <text x="300" y="380" font-size="11" fill="white" font-weight="700" text-anchor="middle">Carbón Activado</text>
+  <text x="300" y="397" font-size="10" fill="#E8F0EB" text-anchor="middle">Absorción VOCs y gases</text>
+
+  <!-- 6. Salida de aire limpio -->
+  <rect x="215" y="424" width="170" height="35" rx="8" fill="#E8F0EB" stroke="#52B788" stroke-width="1.5"/>
+  <text x="300" y="447" font-size="11" fill="#1B4332" text-anchor="middle">Aire purificado</text>
+
+  <!-- 7. ESP32 + Batería -->
+  <rect x="195" y="472" width="210" height="65" rx="8" fill="#1B4332" filter="url(#shadow)"/>
+  <text x="300" y="496" font-size="12" fill="white" font-weight="700" text-anchor="middle">ESP32 + Batería LiPo</text>
+  <text x="300" y="513" font-size="10" fill="#52B788" text-anchor="middle">Wemos Lolin32 · 2200 mAh</text>
+  <text x="300" y="528" font-size="10" fill="#E9C46A" text-anchor="middle">MQTT · WiFi · OLED</text>
+
+  <!-- 8. Sensor BMP280 + DHT22 -->
+  <rect x="195" y="550" width="210" height="50" rx="8" fill="#52B788" opacity="0.75" filter="url(#shadow)"/>
+  <text x="300" y="570" font-size="11" fill="white" font-weight="700" text-anchor="middle">BMP280 · DHT22</text>
+  <text x="300" y="587" font-size="10" fill="white" text-anchor="middle">Presión · Temperatura · Humedad</text>
+
+  <!-- Flechas salida de aire (abajo) -->
+  <line x1="230" y1="692" x2="230" y2="720" stroke="#52B788" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <line x1="300" y1="692" x2="300" y2="720" stroke="#52B788" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <line x1="370" y1="692" x2="370" y2="720" stroke="#52B788" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="300" y="740" font-size="10" fill="#52B788" text-anchor="middle">Aire purificado (salida)</text>
+
+  <!-- Flecha lateral energía -->
+  <path d="M 430 127 Q 520 127 520 500 Q 520 520 440 520" fill="none" stroke="#E9C46A" stroke-width="2" marker-end="url(#arrowOrange)" stroke-dasharray="6,3"/>
+  <text x="555" y="300" font-size="9" fill="#E76F51" text-anchor="middle" transform="rotate(90,555,300)">Energía eólica → Carga LiPo → ESP32</text>
+
+  <!-- Callout lines y etiquetas izquierda -->
+  <line x1="195" y1="127" x2="90" y2="127" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="10" y="116" width="80" height="22" rx="4" fill="#1B4332"/>
+  <text x="50" y="131" font-size="9" fill="white" text-anchor="middle">Turbina</text>
+
+  <line x1="195" y1="193" x2="90" y2="193" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="10" y="182" width="80" height="22" rx="4" fill="#2D6A4F"/>
+  <text x="50" y="197" font-size="9" fill="white" text-anchor="middle">PMS5003</text>
+
+  <line x1="195" y1="255" x2="90" y2="255" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="10" y="244" width="80" height="22" rx="4" fill="#A8DADC"/>
+  <text x="50" y="259" font-size="9" fill="#1B4332" text-anchor="middle">Prefiltro</text>
+
+  <line x1="195" y1="320" x2="90" y2="320" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="10" y="309" width="80" height="22" rx="4" fill="#E8F0EB" stroke="#2D6A4F"/>
+  <text x="50" y="324" font-size="9" fill="#1B4332" text-anchor="middle">HEPA H13</text>
+
+  <line x1="195" y1="386" x2="90" y2="386" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="10" y="375" width="80" height="22" rx="4" fill="#495057"/>
+  <text x="50" y="390" font-size="9" fill="white" text-anchor="middle">Carbón act.</text>
+
+  <line x1="195" y1="504" x2="90" y2="504" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="10" y="493" width="80" height="22" rx="4" fill="#1B4332"/>
+  <text x="50" y="508" font-size="9" fill="white" text-anchor="middle">ESP32</text>
+
+  <line x1="195" y1="575" x2="90" y2="575" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="10" y="564" width="80" height="22" rx="4" fill="#52B788"/>
+  <text x="50" y="579" font-size="9" fill="white" text-anchor="middle">BMP+DHT</text>
+</svg>

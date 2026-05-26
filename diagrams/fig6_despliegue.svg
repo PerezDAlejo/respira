@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 450" font-family="'Inter', 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1B4332"/>
+    </marker>
+    <marker id="arrowDown" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="auto">
+      <polygon points="0 0, 7 0, 3.5 10" fill="#1B4332"/>
+    </marker>
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#00000025"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1050" height="450" fill="#F0F7F4"/>
+
+  <!-- Título -->
+  <text x="525" y="34" font-size="17" fill="#1B4332" font-weight="700" text-anchor="middle">Plan de Despliegue — Instituto San Carlos de La Salle</text>
+
+  <!-- ====== FILA 1: Pasos 1-4 ====== -->
+
+  <!-- PASO 1: Aval Académico -->
+  <rect x="30" y="65" width="200" height="110" rx="10" fill="#1B4332" filter="url(#shadow)"/>
+  <text x="130" y="90" font-size="13" fill="white" font-weight="700" text-anchor="middle">1. Aval Académico</text>
+  <line x1="50" y1="99" x2="210" y2="99" stroke="white" stroke-width="0.5" opacity="0.3"/>
+  <text x="130" y="116" font-size="10" fill="#A8DADC" text-anchor="middle">Robótica · Biología</text>
+  <text x="130" y="131" font-size="10" fill="#A8DADC" text-anchor="middle">Tecnología ISC</text>
+  <text x="130" y="148" font-size="9" fill="#E9C46A" text-anchor="middle" font-style="italic">Equipo RESPIRA</text>
+  <text x="130" y="163" font-size="9" fill="#52B788" text-anchor="middle">Sem. 1</text>
+
+  <!-- Flecha 1→2 -->
+  <line x1="230" y1="120" x2="258" y2="120" stroke="#1B4332" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- PASO 2: Presentación a Rectoría -->
+  <rect x="258" y="65" width="200" height="110" rx="10" fill="#2D6A4F" filter="url(#shadow)"/>
+  <text x="358" y="88" font-size="12" fill="white" font-weight="700" text-anchor="middle">2. Presentación</text>
+  <text x="358" y="104" font-size="12" fill="white" font-weight="700" text-anchor="middle">a Rectoría</text>
+  <line x1="278" y1="113" x2="438" y2="113" stroke="white" stroke-width="0.5" opacity="0.3"/>
+  <text x="358" y="128" font-size="10" fill="#A8DADC" text-anchor="middle">Demo funcional</text>
+  <text x="358" y="143" font-size="10" fill="#A8DADC" text-anchor="middle">+ documentación</text>
+  <text x="358" y="163" font-size="9" fill="#E9C46A" text-anchor="middle" font-style="italic">Rectoría ISC</text>
+
+  <!-- Flecha 2→3 -->
+  <line x1="458" y1="120" x2="486" y2="120" stroke="#1B4332" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- PASO 3: Autorización Escrita -->
+  <rect x="486" y="65" width="200" height="110" rx="10" fill="#52B788" filter="url(#shadow)"/>
+  <text x="586" y="90" font-size="13" fill="white" font-weight="700" text-anchor="middle">3. Autorización</text>
+  <text x="586" y="108" font-size="13" fill="white" font-weight="700" text-anchor="middle">Escrita</text>
+  <line x1="506" y1="117" x2="666" y2="117" stroke="white" stroke-width="0.5" opacity="0.4"/>
+  <text x="586" y="134" font-size="10" fill="#1A1A2E" text-anchor="middle">Acta de conformidad</text>
+  <text x="586" y="149" font-size="10" fill="#1A1A2E" text-anchor="middle">firmada por rector</text>
+  <text x="586" y="163" font-size="9" fill="#1B4332" text-anchor="middle" font-style="italic">Rector / Coordinador</text>
+
+  <!-- Flecha 3→4 -->
+  <line x1="686" y1="120" x2="714" y2="120" stroke="#1B4332" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- PASO 4: Coordinación Sistemas -->
+  <rect x="714" y="65" width="200" height="110" rx="10" fill="#1B4332" filter="url(#shadow)"/>
+  <text x="814" y="88" font-size="12" fill="white" font-weight="700" text-anchor="middle">4. Coordinación</text>
+  <text x="814" y="104" font-size="12" fill="white" font-weight="700" text-anchor="middle">con Sistemas</text>
+  <line x1="734" y1="113" x2="894" y2="113" stroke="white" stroke-width="0.5" opacity="0.3"/>
+  <text x="814" y="128" font-size="10" fill="#A8DADC" text-anchor="middle">Red WiFi del ISC</text>
+  <text x="814" y="143" font-size="10" fill="#A8DADC" text-anchor="middle">Credenciales acceso</text>
+  <text x="814" y="163" font-size="9" fill="#E9C46A" text-anchor="middle" font-style="italic">Sistemas TIC ISC</text>
+
+  <!-- Flecha bajando de fila 1 a fila 2 (desde paso 4 → paso 5) -->
+  <line x1="814" y1="175" x2="814" y2="205" stroke="#1B4332" stroke-width="2.5"/>
+  <line x1="814" y1="205" x2="586" y2="205" stroke="#1B4332" stroke-width="2.5"/>
+  <line x1="586" y1="205" x2="586" y2="235" stroke="#1B4332" stroke-width="2.5" marker-end="url(#arrowDown)"/>
+
+  <!-- ====== FILA 2: Pasos 5-7 ====== -->
+
+  <!-- PASO 5: Instalación del Nodo -->
+  <rect x="258" y="235" width="200" height="110" rx="10" fill="#2D6A4F" filter="url(#shadow)"/>
+  <text x="358" y="258" font-size="13" fill="white" font-weight="700" text-anchor="middle">5. Instalación</text>
+  <text x="358" y="275" font-size="13" fill="white" font-weight="700" text-anchor="middle">del Nodo</text>
+  <line x1="278" y1="284" x2="438" y2="284" stroke="white" stroke-width="0.5" opacity="0.3"/>
+  <text x="358" y="299" font-size="10" fill="#A8DADC" text-anchor="middle">Fachada o patio ISC</text>
+  <text x="358" y="314" font-size="10" fill="#A8DADC" text-anchor="middle">Conexión WiFi</text>
+  <text x="358" y="333" font-size="9" fill="#E9C46A" text-anchor="middle" font-style="italic">Equipo RESPIRA · Sem. 5</text>
+
+  <!-- Flecha 5→6 -->
+  <line x1="458" y1="290" x2="486" y2="290" stroke="#1B4332" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- PASO 6: Validación 30 días -->
+  <rect x="486" y="235" width="200" height="110" rx="10" fill="#52B788" filter="url(#shadow)"/>
+  <text x="586" y="258" font-size="13" fill="white" font-weight="700" text-anchor="middle">6. Validación</text>
+  <text x="586" y="275" font-size="13" fill="white" font-weight="700" text-anchor="middle">30 días</text>
+  <line x1="506" y1="284" x2="666" y2="284" stroke="white" stroke-width="0.5" opacity="0.4"/>
+  <text x="586" y="299" font-size="9" fill="#1A1A2E" text-anchor="middle">Comparación vs SIATA</text>
+  <text x="586" y="313" font-size="9" fill="#1A1A2E" text-anchor="middle">Belén / Poblado</text>
+  <text x="586" y="333" font-size="9" fill="#1B4332" text-anchor="middle" font-style="italic">Sem. 6–7 · Precisión ≥ 80%</text>
+
+  <!-- Flecha 6→7 -->
+  <line x1="686" y1="290" x2="714" y2="290" stroke="#1B4332" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- PASO 7: Publicación de Resultados -->
+  <rect x="714" y="235" width="200" height="110" rx="10" fill="#E9C46A" filter="url(#shadow)"/>
+  <text x="814" y="260" font-size="12" fill="#1A1A2E" font-weight="700" text-anchor="middle">7. Publicación</text>
+  <text x="814" y="276" font-size="12" fill="#1A1A2E" font-weight="700" text-anchor="middle">de Resultados</text>
+  <line x1="734" y1="285" x2="894" y2="285" stroke="#1A1A2E" stroke-width="0.5" opacity="0.3"/>
+  <text x="814" y="300" font-size="10" fill="#1A1A2E" text-anchor="middle">Informe técnico</text>
+  <text x="814" y="315" font-size="10" fill="#1A1A2E" text-anchor="middle">Repositorio público</text>
+  <text x="814" y="333" font-size="9" fill="#1B4332" text-anchor="middle" font-style="italic">Equipo RESPIRA · Sem. 8</text>
+
+  <!-- Nota al pie -->
+  <text x="525" y="415" font-size="10" fill="#2D6A4F" text-anchor="middle" font-style="italic">Instituto San Carlos de La Salle — Medellín, Colombia · Proyecto RESPIRA 2026</text>
+</svg>

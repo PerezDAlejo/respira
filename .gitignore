@@ -1,0 +1,15 @@
+# Sistema
+.DS_Store
+**/.DS_Store
+.claude/
+
+# No público / otro proyecto
+textos_referencia/
+Indicaciones_y_rubrica_evaluacion/
+CLAUDE.md
+
+# Documentos (entregables aparte, no van al sitio)
+docs/
+
+# PNG rasterizados: solo para los .docx, la web usa los SVG
+diagrams/png/

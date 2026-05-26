@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 820" font-family="'Inter', 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="700" height="820" fill="#F0F7F4"/>
+
+  <!-- Título -->
+  <text x="350" y="35" font-size="18" fill="#1B4332" font-weight="700" text-anchor="middle">Plano Proyectivo del Nodo RESPIRA</text>
+
+  <!-- Cuerpo cilíndrico principal -->
+  <rect x="270" y="80" width="160" height="580" rx="80" fill="none" stroke="#1B4332" stroke-width="2.5"/>
+  <!-- Interior sombreado del cilindro -->
+  <rect x="274" y="84" width="152" height="572" rx="76" fill="white" opacity="0.5"/>
+
+  <!-- Componentes dentro del cilindro -->
+
+  <!-- 1. Microturbina Savonius -->
+  <rect x="285" y="100" width="130" height="38" rx="6" fill="#1B4332" opacity="0.9"/>
+  <text x="350" y="122" font-size="10" fill="white" font-weight="700" text-anchor="middle">Microturbina Savonius</text>
+
+  <!-- 2. PMS5003 -->
+  <rect x="285" y="152" width="130" height="38" rx="6" fill="#2D6A4F" opacity="0.85"/>
+  <text x="350" y="174" font-size="10" fill="white" font-weight="700" text-anchor="middle">Sensor PMS5003</text>
+
+  <!-- 3. Prefiltro -->
+  <rect x="285" y="204" width="130" height="38" rx="6" fill="#A8DADC"/>
+  <text x="350" y="226" font-size="10" fill="#1B4332" font-weight="700" text-anchor="middle">Prefiltro Lavable</text>
+
+  <!-- 4. HEPA H13 -->
+  <rect x="285" y="256" width="130" height="38" rx="6" fill="#E8F0EB" stroke="#2D6A4F" stroke-width="1.5"/>
+  <text x="350" y="278" font-size="10" fill="#1B4332" font-weight="700" text-anchor="middle">Filtro HEPA H13</text>
+
+  <!-- 5. Carbón activado -->
+  <rect x="285" y="308" width="130" height="38" rx="6" fill="#495057"/>
+  <text x="350" y="330" font-size="10" fill="white" font-weight="700" text-anchor="middle">Carbón Activado</text>
+
+  <!-- ESP32 + OLED -->
+  <rect x="285" y="360" width="130" height="48" rx="6" fill="#1B4332" opacity="0.85"/>
+  <text x="350" y="380" font-size="9" fill="white" font-weight="700" text-anchor="middle">ESP32 Wemos</text>
+  <text x="350" y="396" font-size="9" fill="#52B788" text-anchor="middle">Lolin32 + OLED</text>
+
+  <!-- DHT22 -->
+  <rect x="285" y="420" width="130" height="38" rx="6" fill="#52B788" opacity="0.8"/>
+  <text x="350" y="442" font-size="10" fill="white" font-weight="700" text-anchor="middle">Sensor DHT22</text>
+
+  <!-- BMP280 -->
+  <rect x="285" y="472" width="130" height="38" rx="6" fill="#52B788" opacity="0.6"/>
+  <text x="350" y="494" font-size="10" fill="white" font-weight="700" text-anchor="middle">Sensor BMP280</text>
+
+  <!-- Batería LiPo + TP4056 -->
+  <rect x="285" y="524" width="130" height="38" rx="6" fill="#E9C46A"/>
+  <text x="350" y="541" font-size="9" fill="#1A1A2E" font-weight="700" text-anchor="middle">Batería LiPo 3.7V</text>
+  <text x="350" y="556" font-size="9" fill="#1A1A2E" text-anchor="middle">+ TP4056</text>
+
+  <!-- Carcasa PLA -->
+  <rect x="285" y="576" width="130" height="38" rx="6" fill="#E8F0EB" stroke="#2D6A4F" stroke-width="1.5"/>
+  <text x="350" y="598" font-size="9" fill="#1B4332" font-weight="700" text-anchor="middle">Carcasa PLA</text>
+  <text x="350" y="611" font-size="9" fill="#2D6A4F" text-anchor="middle">Biodegradable</text>
+
+  <!-- ====== CALLOUT LINES Y CAJAS IZQUIERDA ====== -->
+
+  <!-- Callout 1: Microturbina -->
+  <line x1="285" y1="119" x2="200" y2="119" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="10" y="107" width="190" height="24" rx="5" fill="#1B4332" filter="url(#shadow)"/>
+  <text x="105" y="123" font-size="10" fill="white" text-anchor="middle">Microturbina Savonius</text>
+
+  <!-- Callout 2: PMS5003 -->
+  <line x1="285" y1="171" x2="200" y2="171" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="10" y="159" width="190" height="24" rx="5" fill="#2D6A4F" filter="url(#shadow)"/>
+  <text x="105" y="175" font-size="10" fill="white" text-anchor="middle">Sensor PMS5003</text>
+
+  <!-- Callout 3: Prefiltro -->
+  <line x1="285" y1="223" x2="200" y2="223" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="10" y="211" width="190" height="24" rx="5" fill="#A8DADC" filter="url(#shadow)"/>
+  <text x="105" y="227" font-size="10" fill="#1B4332" text-anchor="middle">Prefiltro Lavable (malla)</text>
+
+  <!-- Callout 4: HEPA H13 -->
+  <line x1="285" y1="275" x2="200" y2="275" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="10" y="263" width="190" height="24" rx="5" fill="#E8F0EB" stroke="#2D6A4F" filter="url(#shadow)"/>
+  <text x="105" y="279" font-size="10" fill="#1B4332" text-anchor="middle">Filtro HEPA H13</text>
+
+  <!-- Callout 5: Carbón Activado -->
+  <line x1="285" y1="327" x2="200" y2="327" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="10" y="315" width="190" height="24" rx="5" fill="#495057" filter="url(#shadow)"/>
+  <text x="105" y="331" font-size="10" fill="white" text-anchor="middle">Carbón Activado</text>
+
+  <!-- ====== CALLOUT LINES Y CAJAS DERECHA ====== -->
+
+  <!-- Callout 6: ESP32 + OLED -->
+  <line x1="415" y1="384" x2="500" y2="384" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="500" y="372" width="190" height="24" rx="5" fill="#1B4332" filter="url(#shadow)"/>
+  <text x="595" y="388" font-size="10" fill="white" text-anchor="middle">ESP32 Wemos Lolin32 + OLED</text>
+
+  <!-- Callout 7: DHT22 -->
+  <line x1="415" y1="439" x2="500" y2="439" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="500" y="427" width="190" height="24" rx="5" fill="#52B788" filter="url(#shadow)"/>
+  <text x="595" y="443" font-size="10" fill="white" text-anchor="middle">Sensor DHT22 (T + H)</text>
+
+  <!-- Callout 8: BMP280 -->
+  <line x1="415" y1="491" x2="500" y2="491" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="500" y="479" width="190" height="24" rx="5" fill="#52B788" opacity="0.75" filter="url(#shadow)"/>
+  <text x="595" y="495" font-size="10" fill="white" text-anchor="middle">Sensor BMP280 (Presión)</text>
+
+  <!-- Callout 9: Batería LiPo -->
+  <line x1="415" y1="543" x2="500" y2="543" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="500" y="531" width="190" height="24" rx="5" fill="#E9C46A" filter="url(#shadow)"/>
+  <text x="595" y="547" font-size="10" fill="#1A1A2E" text-anchor="middle">Batería LiPo 3.7V + TP4056</text>
+
+  <!-- Callout 10: Carcasa PLA -->
+  <line x1="415" y1="595" x2="500" y2="595" stroke="#52B788" stroke-width="1.5"/>
+  <rect x="500" y="583" width="190" height="24" rx="5" fill="#E8F0EB" stroke="#2D6A4F" filter="url(#shadow)"/>
+  <text x="595" y="599" font-size="10" fill="#1B4332" text-anchor="middle">Carcasa PLA Biodegradable</text>
+
+  <!-- ====== COTAS DE DIMENSIÓN ====== -->
+
+  <!-- Cota vertical (altura 25 cm) -->
+  <line x1="450" y1="80" x2="450" y2="660" stroke="#E76F51" stroke-width="1.5"/>
+  <line x1="445" y1="80" x2="455" y2="80" stroke="#E76F51" stroke-width="1.5"/>
+  <line x1="445" y1="660" x2="455" y2="660" stroke="#E76F51" stroke-width="1.5"/>
+  <text x="470" y="375" font-size="11" fill="#E76F51" font-weight="700">25 cm</text>
+  <text x="470" y="390" font-size="10" fill="#E76F51">altura</text>
+
+  <!-- Cota horizontal (diámetro 15 cm) -->
+  <line x1="270" y1="70" x2="430" y2="70" stroke="#E76F51" stroke-width="1.5"/>
+  <line x1="270" y1="65" x2="270" y2="75" stroke="#E76F51" stroke-width="1.5"/>
+  <line x1="430" y1="65" x2="430" y2="75" stroke="#E76F51" stroke-width="1.5"/>
+  <text x="350" y="64" font-size="11" fill="#E76F51" font-weight="700" text-anchor="middle">15 cm diámetro</text>
+
+  <!-- Nota al pie -->
+  <text x="350" y="790" font-size="9" fill="#2D6A4F" text-anchor="middle" font-style="italic">Representación proyectiva. Diseño sujeto a modificaciones conforme a pruebas de prototipado.</text>
+</svg>

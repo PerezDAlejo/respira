@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 700" font-family="'Inter', 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="480" height="700" fill="#F0F7F4"/>
+
+  <!-- Título -->
+  <text x="240" y="35" font-size="20" fill="#1B4332" font-weight="700" text-anchor="middle">Escala ICA</text>
+  <text x="240" y="55" font-size="14" fill="#1B4332" font-weight="700" text-anchor="middle">Índice de Calidad del Aire</text>
+  <text x="240" y="73" font-size="11" fill="#2D6A4F" text-anchor="middle">Estándar colombiano (IDEAM / MADS)</text>
+
+  <!-- Encabezados de columna -->
+  <rect x="30" y="82" width="420" height="25" rx="4" fill="#1B4332"/>
+  <text x="55" y="99" font-size="10" fill="white" font-weight="700">Rango ICA</text>
+  <text x="155" y="99" font-size="10" fill="white" font-weight="700">Nivel</text>
+  <text x="285" y="99" font-size="10" fill="white" font-weight="700">PM2.5 µg/m³</text>
+  <text x="395" y="99" font-size="10" fill="white" font-weight="700">Riesgo</text>
+
+  <!-- ====== ROW 1: BUENO ====== -->
+  <rect x="30" y="110" width="420" height="78" rx="4" fill="#00E400" filter="url(#shadow)"/>
+  <!-- Rango -->
+  <text x="55" y="145" font-size="20" fill="#004400" font-weight="700">0–50</text>
+  <!-- Nivel -->
+  <text x="155" y="138" font-size="16" fill="#004400" font-weight="700">Bueno</text>
+  <text x="155" y="156" font-size="10" fill="#005500">Sin restricciones</text>
+  <!-- PM2.5 -->
+  <text x="285" y="141" font-size="12" fill="#004400" font-weight="700">0–12</text>
+  <text x="285" y="157" font-size="10" fill="#005500">µg/m³</text>
+  <!-- Descripción -->
+  <text x="395" y="141" font-size="10" fill="#003300" text-anchor="middle">Sin</text>
+  <text x="395" y="155" font-size="10" fill="#003300" text-anchor="middle">riesgo</text>
+  <!-- Ícono ok -->
+  <circle cx="450" cy="149" r="10" fill="#004400" opacity="0.3"/>
+  <path d="M445 149l3 3 5-6" stroke="#004400" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ====== ROW 2: ACEPTABLE ====== -->
+  <rect x="30" y="193" width="420" height="78" rx="4" fill="#FFFF00" filter="url(#shadow)"/>
+  <text x="55" y="228" font-size="20" fill="#555500" font-weight="700">51–100</text>
+  <text x="155" y="221" font-size="14" fill="#555500" font-weight="700">Aceptable</text>
+  <text x="155" y="238" font-size="10" fill="#666600">Sensibles: precaución</text>
+  <text x="285" y="224" font-size="12" fill="#555500" font-weight="700">12.1–35.4</text>
+  <text x="285" y="240" font-size="10" fill="#666600">µg/m³</text>
+  <text x="390" y="224" font-size="9" fill="#444400">Sensibles</text>
+  <text x="390" y="238" font-size="9" fill="#444400">presentan</text>
+  <text x="390" y="252" font-size="9" fill="#444400">síntomas</text>
+
+  <!-- ====== ROW 3: DAÑINO PARA SENSIBLES ====== -->
+  <rect x="30" y="276" width="420" height="78" rx="4" fill="#FF7E00" filter="url(#shadow)"/>
+  <text x="55" y="308" font-size="17" fill="white" font-weight="700">101–150</text>
+  <text x="155" y="301" font-size="12" fill="white" font-weight="700">Dañino para</text>
+  <text x="155" y="317" font-size="12" fill="white" font-weight="700">sensibles</text>
+  <text x="155" y="340" font-size="10" fill="#FFE0C0">Reducir actividad ext.</text>
+  <text x="285" y="308" font-size="12" fill="white" font-weight="700">35.5–55.4</text>
+  <text x="285" y="324" font-size="10" fill="#FFE0C0">µg/m³</text>
+  <text x="390" y="308" font-size="9" fill="white">Evitar</text>
+  <text x="390" y="322" font-size="9" fill="white">ejercicio</text>
+  <text x="390" y="336" font-size="9" fill="white">exterior</text>
+
+  <!-- ====== ROW 4: DAÑINO ====== -->
+  <rect x="30" y="359" width="420" height="78" rx="4" fill="#FF0000" filter="url(#shadow)"/>
+  <text x="55" y="391" font-size="17" fill="white" font-weight="700">151–200</text>
+  <text x="155" y="391" font-size="16" fill="white" font-weight="700">Dañino</text>
+  <text x="155" y="409" font-size="10" fill="#FFB0B0">Evitar actividad exterior</text>
+  <text x="285" y="387" font-size="12" fill="white" font-weight="700">55.5–150.4</text>
+  <text x="285" y="403" font-size="10" fill="#FFB0B0">µg/m³</text>
+  <text x="390" y="387" font-size="9" fill="white">Todos</text>
+  <text x="390" y="401" font-size="9" fill="white">afectados</text>
+
+  <!-- ====== ROW 5: MUY DAÑINO ====== -->
+  <rect x="30" y="442" width="420" height="78" rx="4" fill="#8F3F97" filter="url(#shadow)"/>
+  <text x="55" y="474" font-size="17" fill="white" font-weight="700">201–300</text>
+  <text x="155" y="470" font-size="14" fill="white" font-weight="700">Muy dañino</text>
+  <text x="155" y="488" font-size="10" fill="#E0B0FF">Alerta sanitaria</text>
+  <text x="285" y="470" font-size="11" fill="white" font-weight="700">150.5–250.4</text>
+  <text x="285" y="486" font-size="10" fill="#E0B0FF">µg/m³</text>
+  <text x="390" y="470" font-size="9" fill="white">Alerta</text>
+  <text x="390" y="484" font-size="9" fill="white">sanitaria</text>
+
+  <!-- ====== ROW 6: PELIGROSO ====== -->
+  <rect x="30" y="525" width="420" height="78" rx="4" fill="#7E0023" filter="url(#shadow)"/>
+  <text x="55" y="557" font-size="17" fill="white" font-weight="700">301+</text>
+  <text x="155" y="553" font-size="16" fill="white" font-weight="700">Peligroso</text>
+  <text x="155" y="571" font-size="10" fill="#FFB0B0">Emergencia sanitaria</text>
+  <text x="285" y="553" font-size="11" fill="white" font-weight="700">&gt; 250.4</text>
+  <text x="285" y="569" font-size="10" fill="#FFB0B0">µg/m³</text>
+  <text x="390" y="553" font-size="9" fill="white">Emergen-</text>
+  <text x="390" y="567" font-size="9" fill="white">cia</text>
+  <text x="390" y="581" font-size="9" fill="white">sanitaria</text>
+
+  <!-- Nota al pie -->
+  <text x="240" y="630" font-size="9" fill="#2D6A4F" text-anchor="middle" font-style="italic">Fuente: IDEAM – Protocolo para el Monitoreo de la Calidad del Aire, Colombia</text>
+  <text x="240" y="647" font-size="9" fill="#2D6A4F" text-anchor="middle" font-style="italic">Resolución 2254 de 2017 · MADS · Valores OMS 2021: PM2.5 anual = 5 µg/m³</text>
+  <text x="240" y="670" font-size="9" fill="#E76F51" text-anchor="middle">* RESPIRA usa ICA como indicador orientativo — no reemplaza monitoreo oficial SIATA</text>
+</svg>

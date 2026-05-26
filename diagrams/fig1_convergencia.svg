@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="'Inter', 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="4" flood-color="#00000033"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="800" height="600" fill="#F0F7F4"/>
+
+  <!-- Título -->
+  <text x="400" y="45" font-size="22" fill="#1B4332" font-weight="700" text-anchor="middle">Convergencia Tridimensional RESPIRA</text>
+
+  <!-- Círculo CIENTÍFICA -->
+  <circle cx="265" cy="230" r="175" fill="#2D6A4F" opacity="0.72" stroke="white" stroke-width="2"/>
+
+  <!-- Círculo ENERGÉTICA -->
+  <circle cx="535" cy="230" r="175" fill="#E9C46A" opacity="0.72" stroke="white" stroke-width="2"/>
+
+  <!-- Círculo ECOLÓGICA -->
+  <circle cx="400" cy="390" r="175" fill="#52B788" opacity="0.72" stroke="white" stroke-width="2"/>
+
+  <!-- Texto Dimensión Científica -->
+  <text x="130" y="170" font-size="14" fill="white" font-weight="700" text-anchor="middle">Dimensión Científica</text>
+  <text x="130" y="192" font-size="11" fill="white" text-anchor="middle">PM1.0 / PM2.5 / PM10</text>
+  <text x="130" y="208" font-size="11" fill="white" text-anchor="middle">Temperatura</text>
+  <text x="130" y="224" font-size="11" fill="white" text-anchor="middle">Humedad</text>
+  <text x="130" y="240" font-size="11" fill="white" text-anchor="middle">Presión atmosférica</text>
+
+  <!-- Texto Dimensión Energética -->
+  <text x="670" y="170" font-size="14" fill="#1A1A2E" font-weight="700" text-anchor="middle">Dimensión Energética</text>
+  <text x="670" y="192" font-size="11" fill="#1A1A2E" text-anchor="middle">Turbina Savonius</text>
+  <text x="670" y="208" font-size="11" fill="#1A1A2E" text-anchor="middle">Generación eólica</text>
+  <text x="670" y="224" font-size="11" fill="#1A1A2E" text-anchor="middle">Batería LiPo</text>
+  <text x="670" y="240" font-size="11" fill="#1A1A2E" text-anchor="middle">Autosuficiencia</text>
+
+  <!-- Texto Dimensión Ecológica -->
+  <text x="400" y="490" font-size="14" fill="#1A1A2E" font-weight="700" text-anchor="middle">Dimensión Ecológica</text>
+  <text x="400" y="510" font-size="11" fill="#1A1A2E" text-anchor="middle">Prefiltro lavable</text>
+  <text x="400" y="526" font-size="11" fill="#1A1A2E" text-anchor="middle">HEPA H13</text>
+  <text x="400" y="542" font-size="11" fill="#1A1A2E" text-anchor="middle">Carbón activado</text>
+
+  <!-- Intersección central -->
+  <circle cx="400" cy="295" r="45" fill="white" opacity="0.95" filter="url(#shadow)"/>
+  <text x="400" y="291" font-size="18" font-weight="700" fill="#1B4332" text-anchor="middle">RESPIRA</text>
+  <text x="400" y="308" font-size="9" fill="#2D6A4F" text-anchor="middle">Sistema Integral</text>
+
+  <!-- Leyenda -->
+  <rect x="580" y="530" width="16" height="16" rx="3" fill="#2D6A4F" opacity="0.85"/>
+  <text x="602" y="543" font-size="11" fill="#1A1A2E">Científica</text>
+  <rect x="660" y="530" width="16" height="16" rx="3" fill="#E9C46A" opacity="0.85"/>
+  <text x="682" y="543" font-size="11" fill="#1A1A2E">Energética</text>
+  <rect x="620" y="555" width="16" height="16" rx="3" fill="#52B788" opacity="0.85"/>
+  <text x="642" y="568" font-size="11" fill="#1A1A2E">Ecológica</text>
+</svg>
