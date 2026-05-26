@@ -124,9 +124,8 @@ h1,h2,h3,h4,h5 { font-family: var(--display); font-weight: 700; letter-spacing: 
 
 /* ===== MARQUEE ===== */
 .marquee { background: var(--gp); overflow: hidden; padding: 18px 0; border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06); }
-.marquee-track { display: flex; gap: 48px; white-space: nowrap; width: max-content; animation: scroll-x 32s linear infinite; }
-.marquee:hover .marquee-track { animation-play-state: paused; }
-.marquee-item { font-family: var(--display); font-size: 1.05rem; font-weight: 600; color: rgba(255,255,255,.55); display: inline-flex; align-items: center; gap: 14px; }
+.marquee-track { display: flex; white-space: nowrap; width: max-content; animation: scroll-x 38s linear infinite; will-change: transform; }
+.marquee-item { font-family: var(--display); font-size: 1.05rem; font-weight: 600; color: rgba(255,255,255,.55); display: inline-flex; align-items: center; gap: 14px; margin-right: 48px; }
 .marquee-item .ic { width: 16px; height: 16px; color: var(--ga); }
 @keyframes scroll-x { to { transform: translateX(-50%); } }
 
