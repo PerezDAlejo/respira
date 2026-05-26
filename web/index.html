@@ -491,6 +491,12 @@ footer .fnote { font-size: .76rem; margin-top: 14px; opacity: .45; max-width: 56
       <p class="cap">Arquitectura del sistema RESPIRA — flujo de datos desde el nodo hasta el usuario final</p>
     </div>
 
+    <div data-reveal style="background:linear-gradient(135deg,rgba(82,183,136,.09),rgba(45,106,79,.04));border:1px solid var(--line);border-radius:var(--r);padding:34px;margin:48px 0">
+      <h3 style="font-size:1.4rem;color:var(--gp);margin-bottom:14px">De un nodo a una red</h3>
+      <p style="color:var(--muted);line-height:1.75;margin-bottom:14px">RESPIRA está diseñado como una <strong style="color:var(--gp)">red</strong>, no como un sensor aislado. Cada nodo publica sus mediciones individuales —PM, temperatura, humedad y presión— a un broker MQTT común, mediante un topic propio (<code style="background:#fff;border:1px solid var(--line);padding:2px 7px;border-radius:5px;color:var(--gs)">respira/isc/nodoXX/datos</code>).</p>
+      <p style="color:var(--muted);line-height:1.75">El backend recibe esos flujos individuales y los <strong style="color:var(--gp)">transforma en información de red</strong>: un mapa en vivo de la calidad del aire por zonas, el ICA de cada punto, y comparaciones y tendencias entre nodos. Así, el valor crece con cada nodo: una medición describe un punto; muchas, dibujan el aire de toda una comunidad. El piloto comienza con un nodo en el ISC y el sistema está preparado para sumar más.</p>
+    </div>
+
     <h3 style="font-size:1.5rem;color:var(--gp);margin-bottom:4px" data-reveal>Stack tecnológico</h3>
     <table class="tbl" data-reveal>
       <thead><tr><th>Capa</th><th>Tecnología</th><th>Función</th></tr></thead>
